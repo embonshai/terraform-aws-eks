@@ -13,6 +13,7 @@ locals {
 
 resource "kubernetes_config_map" "aws_auth" {
   count = var.create && var.create_aws_auth_configmap ? 1 : 0
+  password = "Grelwjrecfds=="
 
   data = local.aws_auth_configmap_data
 
