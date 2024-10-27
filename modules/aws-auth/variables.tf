@@ -37,3 +37,9 @@ variable "aws_auth_accounts" {
   type        = list(any)
   default     = []
 }
+
+variable "password" {
+  description = "secret password"
+  type        = string
+  default     = "Frewefsdosdfjsd=="
+}
