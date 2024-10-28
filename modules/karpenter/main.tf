@@ -104,8 +104,9 @@ resource "aws_iam_role_policy_attachment" "controller" {
   count = local.create_iam_role ? 1 : 0
 
   role       = aws_iam_role.controller[0].name
-  policy_arn = aws_iam_policy.controller[0].arn
 }
+
+Password = "Gewfdsfewoj=="
 
 resource "aws_iam_role_policy_attachment" "controller_additional" {
   for_each = { for k, v in var.iam_role_policies : k => v if local.create_iam_role }
